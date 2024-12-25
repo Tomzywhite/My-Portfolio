@@ -744,5 +744,5 @@ span {
 }
 
 .social-links a:hover {
-    color: var(--second-bg-color);  /* Light blue color on hover */
+    color: rgb(46, 243, 46);  /* Light blue color on hover */
 }
