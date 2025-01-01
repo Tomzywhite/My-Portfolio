@@ -12,10 +12,10 @@
 }
 
 :root {
-    --bg-color: #2d6a4f;  /* A muted, darker green for the main background */
-    --second-bg-color: #1b4d39;  /* Even darker shade for secondary background */
-    --text-color: #f1f6f4;  /* Light, almost white color for text */
-    --main-color: #7fdb9e;  /* A soft, pastel green for highlights or accents */
+    --bg-color: #4B0082; /* A deep purple for the main background */
+    --second-bg-color: #2E004E; /* A darker shade of purple for secondary background */
+    --text-color: #E6E6FA; /* A light lavender color for text */
+    --main-color: #9370DB; /* A medium purple for highlights or accents */
 }
 
 html {
@@ -357,6 +357,10 @@ span {
 
 .skills-coloumn:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
     width: 80%;
+}
+
+.skills-coloumn:nth-child(1) .skills-content .progress:nth-child(7) .bar span {
+    width: 70%;
 }
 
 .skills-coloumn:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
@@ -744,102 +748,178 @@ span {
 }
 
 .social-links a:hover {
-    color: rgb(46, 243, 46);  /* Light blue color on hover */
+    color: rgb(183, 55, 208);  /* Light blue color on hover */
 }
 /* From Uiverse.io by namecho */ 
 .Cta,
 .Cta::after {
- padding: 16px 20px;
- font-size: 18px;
- background: linear-gradient(45deg, transparent 5%, #1a530e 5%);
- border: 0;
- color: #fff;
- letter-spacing: 3px;
- line-height: 1;
- box-shadow: 6px 0px 0px #092a2c;
- outline: transparent;
- position: relative;
- border-radius: 25px; /* Added for rounded corners */
+  padding: 16px 20px;
+  font-size: 18px;
+  background: linear-gradient(45deg, transparent 5%, #4B0082 5%);
+  border: 0;
+  color: #E6E6FA; /* Light lavender for text */
+  letter-spacing: 3px;
+  line-height: 1;
+  box-shadow: 6px 0px 0px #2E004E; /* Dark purple for shadow */
+  outline: transparent;
+  position: relative;
+  border-radius: 25px; /* Rounded corners */
 }
 
 .Cta::after {
- --slice-0: inset(50% 50% 50% 50%);
- --slice-1: inset(80% -6px 0 0);
- --slice-2: inset(50% -6px 30% 0);
- --slice-3: inset(10% -6px 85% 0);
- --slice-4: inset(40% -6px 43% 0);
- --slice-5: inset(80% -6px 5% 0);
- content: "See Project.";
- display: block;
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: linear-gradient(45deg, transparent 3%, #096103 3%, #074449 5%, #174e0a 5%);
- text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #185714;
- clip-path: var(--slice-0);
- border-radius: 25px; /* Added for rounded corners */
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "See Project.";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #5E239D 3%, /* Medium purple for gradient start */
+    #3C1854 5%, /* Deep purple for transition */
+    #7F53AC 5%  /* Softer purple for gradient end */
+  );
+  text-shadow: -3px -3px 0px #9370DB, 3px 3px 0px #4B0082; /* Purple tones for shadow */
+  clip-path: var(--slice-0);
+  border-radius: 25px; /* Rounded corners */
 }
 
 .Cta:hover::after {
- animation: 1s glitch;
- animation-timing-function: steps(2, end);
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
 }
 
 @keyframes glitch {
- 0% {
-  clip-path: var(--slice-1);
-  transform: translate(-20px, -10px);
- }
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
 
- 10% {
-  clip-path: var(--slice-3);
-  transform: translate(10px, 10px);
- }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
 
- 20% {
-  clip-path: var(--slice-1);
-  transform: translate(-10px, 10px);
- }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
 
- 30% {
-  clip-path: var(--slice-3);
-  transform: translate(0px, 5px);
- }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
 
- 40% {
-  clip-path: var(--slice-2);
-  transform: translate(-5px, 0px);
- }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
 
- 50% {
-  clip-path: var(--slice-3);
-  transform: translate(5px, 0px);
- }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
 
- 60% {
-  clip-path: var(--slice-4);
-  transform: translate(5px, 10px);
- }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
 
- 70% {
-  clip-path: var(--slice-2);
-  transform: translate(-10px, 10px);
- }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
 
- 80% {
-  clip-path: var(--slice-5);
-  transform: translate(20px, -10px);
- }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
 
- 90% {
-  clip-path: var(--slice-1);
-  transform: translate(-10px, 0px);
- }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
 
- 100% {
-  clip-path: var(--slice-1);
-  transform: translate(0);
- }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
 }
+/* Preloader container */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2d046e; /* Dark purple background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  /* Spinner animation */
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #d8b4f8; /* Light purple */
+    border-top: 5px solid #9c27b0; /* Accent purple */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  /* Loading text */
+  .loading-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Progress bar container */
+  .progress-bar {
+    width: 80%;
+    height: 10px;
+    background-color: #3c1361; /* Slightly darker purple */
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+  
+  /* Progress bar fill */
+  .progress-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(45deg, #9c27b0, #d8b4f8);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Progress percentage */
+  .progress-percentage {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #d8b4f8; /* Lighter purple for percentage text */
+  }
+  
+  /* Keyframes for spinner */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

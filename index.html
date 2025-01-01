@@ -10,6 +10,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+        <div class="loading-text">
+        Loading<span id="loading-dots">...</span>
+        </div>
+        <div class="progress-bar">
+        <div id="progress" class="progress-fill"></div>
+        </div>
+        <p class="progress-percentage" id="progress-percentage">0%</p>
+    </div>
+    
+    
+    
 <!-- header design  -->
 <header class="header">
     <a href="#" class="logo">TheTomide</a>
@@ -34,10 +48,9 @@
         <div class="text-animate">
             <h3>Web Developer</h3>
         </div>
-        <p>Motivated and detail-oriented frontend developer and quality assurance engineer with experience building responsive, user-friendly
-            websites and web applications. Proficient in modern web technologies.Passionate about solving complex
-            problems and delivering high-quality solutions. Seeking to leverage my skills and expertise to contribute to
-            impactful projects.
+        <p>Motivated and detail-oriented Frontend Developer and Quality Assurance Engineer with expertise in creating responsive,<br>
+            user-friendly websites and applications. Proficient in modern web technologies, passionate about solving complex problems, and committed to delivering high-quality solutions.<br>
+            Seeking to contribute my skills to impactful projects.
 
         </p>
         <div class="btn-box">
@@ -56,9 +69,9 @@
     </div>
     <div class="about-content">
         <h3>Frontend Developer and Quality Assurance Engineer</h3>
-        <p>Aspiring Frontend Developer And Quality Assurance Engineer | Continuous Learner Passionate about crafting responsive, user-friendly
-            web applications.Proficient in: HTML, CSS, JavaScript, Bootstrap, Cypress, Git, GitHub, and
-            Wordpress.Building my way forward with every project I create.Constantly leveling up my skills to stay
+        <p> An Aspiring Frontend Developer And Quality Assurance Engineer | Continuous Learner Passionate about crafting responsive, user-friendly
+            web applications | Proficient in: HTML, CSS, JavaScript, Bootstrap, Cypress, Git, GitHub, and
+            Wordpress | Building my way forward with every project I create | Constantly leveling up my skills to stay
             ahead in the tech world. </p>
         <div class="btn-box btns">
             <a href="#" class="btn">Read More</a>
@@ -97,6 +110,10 @@
                     </div>
                     <div class="progress">
                         <h3>User Acceptance Testing(UAT)<span>80%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3>Bootstrap<span>70%</span></h3>
                         <div class="bar"><span></span></div>
                     </div>
                     
@@ -149,7 +166,8 @@
     <h2 class="heading">My <span>Projects</span></h2>
     <div class="project-row">
         <div class="project-coloumn">
-            <div class="project-box">
+            <div class="project-box"
+            >
 
                 <div class="project-content">
                     <div class="content">See Project.
@@ -192,36 +210,44 @@
 <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
-    <form action="https://formspree.io/f/mgvvoqdn">
+    <form action="https://formspree.io/f/xyzznapj" method="POST">
         <div class="input-box">
             <div class="input-field">
-                <input type="text" placeholder="Full Name" required>
+                <label for="full-name"></label>
+                <input id="full-name" type="text" name="full-name" placeholder="Full Name" required>
                 <span class="focus"></span>
             </div>
             <div class="input-field">
-                <input type="text" placeholder="Email Address" required>
+                <label for="email"></label>
+                <input id="email" type="email" name="email" placeholder="Email Address" required>
                 <span class="focus"></span>
             </div>
         </div>
-
+    
         <div class="input-box">
             <div class="input-field">
-                <input type="number" placeholder="Mobile Number" required>
+                <label for="mobile-number"></label>
+                <input id="mobile-number" type="tel" name="mobile-number" placeholder="Mobile Number" required>
                 <span class="focus"></span>
             </div>
             <div class="input-field">
-                <input type="text" placeholder="Email Subject" required>
+                <label for="email-subject"></label>
+                <input id="email-subject" type="text" name="subject" placeholder="Email Subject" required>
                 <span class="focus"></span>
             </div>
         </div>
+        
         <div class="textarea-field">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <label for="message"></label>
+            <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <span class="focus"></span>
         </div>
+        
         <div class="btn-box btns">
             <button type="submit" class="btn">Submit</button>
         </div>
     </form>
+    
 </section>
 
 <!-- footer design  -->
@@ -241,7 +267,7 @@
     </div>
 </footer>
 
-<body>
+
     <script src="script.js"></script>
 </body>
 
