@@ -42,7 +42,7 @@ window.addEventListener("load", function () {
   
     // Simulate progress bar
     const progressInterval = setInterval(() => {
-      progressWidth += 5; // Increment progress by 5%
+      progressWidth += 21; // Increment progress by 21%
       progress.style.width = `${progressWidth}%`;
       progressPercentage.textContent = `${progressWidth}%`;
   
@@ -56,6 +56,6 @@ window.addEventListener("load", function () {
           preloader.style.display = "none";
         }, 500);
       }
-    }, 300); // Adjust timing to synchronize with the experience
+    }, 250); // Adjust timing to synchronize with the experience
   });
   

@@ -922,4 +922,13 @@ span {
       transform: rotate(360deg);
     }
   }
-  
+  .content img {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    align-items: center;
+}
+.content img:hover {
+    transform: scale(1.05);
+}  
