@@ -32,25 +32,27 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.5rem 9%;
+    height: 6rem; /* Set a clear height */
+    padding: 1rem 9%;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    transition: .3s;
+    z-index: 50; /* Lowered to avoid unnecessary overlap */
+    transition: background-color 0.3s ease;
 }
 
 .header.sticky {
-    background: var(--bg-color);
-
+    background-color: var(--bg-color); /* Use your themed background */
 }
 
 .logo {
     font-size: 1.8rem;
     color: var(--text-color);
     font-weight: 600;
+    z-index: 10; /* Ensures visibility but doesn't block content */
 }
+
 
 .navbar a {
     font-size: 1.2rem;
