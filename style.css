@@ -12,11 +12,15 @@
 }
 
 :root {
-    --bg-color: #4B0082; /* A deep purple for the main background */
-    --second-bg-color: #2E004E; /* A darker shade of purple for secondary background */
-    --text-color: #E6E6FA; /* A light lavender color for text */
-    --main-color: #9370DB; /* A medium purple for highlights or accents */
+  --bg-color: #0F172A;         /* Deep navy background — sleek and modern */
+  --second-bg-color: #1E293B;  /* Slightly lighter for cards/sections */
+  --text-color: #F8FAFC;       /* Soft white for high readability */
+  --main-color: #38BDF8;       /* Sky blue for headings, borders, icons */
+  --accent-color: #A855F7;     /* Purple for CTAs, links, buttons */
+  --hover-color: #F472B6;      /* Soft pink for hover effects */
+  --highlight-color: #F59E0B;  /* Gold/amber for tags, icons, etc */
 }
+
 
 html {
     background: var(--bg-color);
@@ -753,17 +757,18 @@ span {
 /* From Uiverse.io by namecho */ 
 .Cta,
 .Cta::after {
-  padding: 16px 20px;
+  padding: 16px 24px;
   font-size: 18px;
-  background: linear-gradient(45deg, transparent 5%, #4B0082 5%);
+  background: linear-gradient(45deg, transparent 5%, #38BDF8 5%); /* Blue gradient slice */
   border: 0;
-  color: #E6E6FA; /* Light lavender for text */
-  letter-spacing: 3px;
+  color: #F8FAFC; /* Soft white */
+  letter-spacing: 2px;
   line-height: 1;
-  box-shadow: 6px 0px 0px #2E004E; /* Dark purple for shadow */
+  box-shadow: 6px 0px 0px #1E293B; /* Deep navy shadow */
   outline: transparent;
   position: relative;
-  border-radius: 25px; /* Rounded corners */
+  border-radius: 25px;
+  cursor: pointer;
 }
 
 .Cta::after {
@@ -783,20 +788,22 @@ span {
   background: linear-gradient(
     45deg,
     transparent 3%,
-    #5E239D 3%, /* Medium purple for gradient start */
-    #3C1854 5%, /* Deep purple for transition */
-    #7F53AC 5%  /* Softer purple for gradient end */
+    #A855F7 3%, /* Accent purple */
+    #38BDF8 5%, /* Bright sky blue */
+    #F472B6 5%  /* Soft pink */
   );
-  text-shadow: -3px -3px 0px #9370DB, 3px 3px 0px #4B0082; /* Purple tones for shadow */
+  text-shadow: -2px -2px 0px #38BDF8, 2px 2px 0px #A855F7; /* Blue + purple shadows */
   clip-path: var(--slice-0);
-  border-radius: 25px; /* Rounded corners */
+  border-radius: 25px;
 }
 
 .Cta:hover::after {
-  animation: 1s glitch;
-  animation-timing-function: steps(2, end);
+  animation: 1s glitch steps(2, end);
 }
-
+.Cta:hover {
+  color: transparent; /* Hide text on hover */
+  box-shadow: 6px 0px 0px #1E293B, -6px 0px 0px #1E293B; /* Add shadow on both sides */
+}
 @keyframes glitch {
   0% {
     clip-path: var(--slice-1);
@@ -855,33 +862,33 @@ span {
 }
 /* Preloader container */
 #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #2d046e; /* Dark purple background */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    text-align: center;
-  }
-  
-  /* Spinner animation */
-  .spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #d8b4f8; /* Light purple */
-    border-top: 5px solid #9c27b0; /* Accent purple */
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin-bottom: 20px;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0F172A; /* New dark navy background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: #F8FAFC; /* Soft white text */
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+/* Spinner animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #1E293B;        /* Deep secondary tone */
+  border-top: 5px solid #38BDF8;    /* Sky blue accent */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
   /* Loading text */
   .loading-text {
     font-size: 18px;
@@ -900,18 +907,20 @@ span {
   
   /* Progress bar fill */
   .progress-fill {
-    width: 0;
-    height: 100%;
-    background: linear-gradient(45deg, #9c27b0, #d8b4f8);
-    transition: width 0.3s ease-in-out;
-  }
-  
-  /* Progress percentage */
-  .progress-percentage {
-    font-size: 14px;
-    margin-top: 5px;
-    color: #d8b4f8; /* Lighter purple for percentage text */
-  }
+  width: 0;
+  height: 100%;
+  background: linear-gradient(45deg, #38BDF8, #360564); /* Sky blue to purple */
+  transition: width 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+/* Progress percentage */
+.progress-percentage {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #F8FAFC; /* Soft white for clarity on dark backgrounds */
+}
+
   
   /* Keyframes for spinner */
   @keyframes spin {
