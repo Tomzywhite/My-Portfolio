@@ -54,15 +54,28 @@
             <h3>Quality Assurance Engineer</h3>
         </div>
         <p>
-  I'm a frontend developer and quality assurance engineer in training. I build responsive, user-friendly websites — and test them to catch bugs before users do.
+  I’m a QA engineer and frontend developer focused on testing and building clean, bug-free user experiences.
   <br><br>
   I work with <strong>HTML, CSS, JavaScript, Bootstrap, Git, GitHub, WordPress</strong>, and <strong>Cypress</strong>.
   <br><br>
-  I’ve worked on real-world apps, written test cases, and helped improve user experience through functional and UI testing. Every project helps me grow — and I’m always learning, building, and improving.
+  I’ve tested real-world fintech apps, written test cases, and improved UX through functional and UI testing. I specialize in catching bugs early and helping dev teams ship confidently
+</p>
+<p className="mt-4 text-white">
+  Want to work with me?  
+  <a
+    href="AKINTOMIDE Cv.pdf"
+    download
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-400 underline hover:text-blue-600 ml-2"
+  >
+    Download My CV
+  </a>
 </p>
 
+
         <div class="btn-box">
-            <a href="#contact" class="btn">Let's Talk</a>
+            <a href="#contact" class="btn"> Let’s Work</a>
         </div>
     </div>
 </section>
@@ -221,7 +234,9 @@
 </section>
 
 <!-- contact section  -->
+
 <section class="contact" id="contact">
+
     <h2 class="heading">Contact <span>Me!</span></h2>
 
     <form action="https://formspree.io/f/xyzznapj" method="POST">
@@ -261,6 +276,57 @@
             <button type="submit" class="btn">Submit</button>
         </div>
     </form>
+    <!-- From Uiverse.io by Na3ar-17 --> 
+<!-- CV Toggle Download/Open Button -->
+<div class="container">
+  <label class="label">
+    <input type="checkbox" class="input" id="cvToggle" />
+    <span class="circle">
+      <svg
+        class="icon"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M12 19V5m0 14-4-4m4 4 4-4"
+        ></path>
+      </svg>
+      <div class="square"></div>
+    </span>
+    <p class="title">Download</p>
+    <p class="title">Open</p>
+  </label>
+</div>
+
+
+<!-- JavaScript -->
+<script>
+  const cvToggle = document.getElementById('cvToggle');
+
+  cvToggle.addEventListener('change', function () {
+    const fileUrl = 'AKINTOMIDE Cv.pdf';
+
+    if (this.checked) {
+      // Open in new tab
+      window.open(fileUrl, '_blank');
+    } else {
+      // Trigger download
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.download = 'AKINTOMIDE Cv.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  });
+</script>
+
     
 </section>
 
